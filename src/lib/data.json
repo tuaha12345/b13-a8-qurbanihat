@@ -35,7 +35,7 @@
     "age": 2,
     "location": "Rajshahi",
     "description": "বাংলাদেশের বিখ্যাত জাত, সুস্বাদু মাংসের জন্য পরিচিত।",
-    "image": "https://images.unsplash.com/photo-1609954111457-b377c9743c16?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0YkxXqO0-sse9D42Ud2PonhTTKLuZJtF0mQ&s",
     "category": "Small Animal"
   },
   {
@@ -48,7 +48,7 @@
     "age": 3,
     "location": "Khulna",
     "description": "লম্বা এবং সুন্দর গঠন, কুরবানির জন্য আদর্শ।",
-    "image": "https://images.unsplash.com/photo-1581323463131-327617e6962c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhEDfgoeBpFyiQF15arkXJgpSt4Yt4Z8osA&s",
     "category": "Small Animal"
   },
   {
@@ -61,7 +61,7 @@
     "age": 2,
     "location": "Sylhet",
     "description": "দেশি খাসি, ভালো মাংস এবং স্বাস্থ্যকর।",
-    "image": "https://images.unsplash.com/photo-1511117833452-1811aa00a604?q=80&w=1000&auto=format&fit=crop",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1HK5YjkGLxeHGwkEeq_Gpe5Ta5mZeBrL51A&s",
     "category": "Small Animal"
   },
   {
@@ -87,7 +87,7 @@
     "age": 2,
     "location": "Barisal",
     "description": "ছোট আকৃতির ভেড়া, সহজে পালনযোগ্য।",
-    "image": "https://images.unsplash.com/photo-1631990206190-8b20560a8d71?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLCrlej494-f0n2ODiUOi67KQ6NHZX3pw70w&s",
     "category": "Medium Animal"
   },
   {
@@ -100,7 +100,7 @@
     "age": 2,
     "location": "Mymensingh",
     "description": "দেশি ভেড়া, কুরবানির জন্য ভালো অপশন।",
-    "image": "https://plus.unsplash.com/premium_photo-1691030658378-acdaab929bed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMBk4_EauCqQdPmmbUDjr1g6GGzHQ5Jyj1QA&s",
     "category": "Medium Animal"
   },
   {
