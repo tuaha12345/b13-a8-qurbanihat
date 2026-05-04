@@ -15,8 +15,8 @@ const animalDetailsPage = ({ params }) => {
   } = useForm();
   const { id } =use(params);
   const animal = data.find((animal) => animal.id == id);
-  console.log(animal);
-  console.log("id", id);
+  // console.log(animal);
+  // console.log("id", id);
   const onSubmit=()=>{
     toast.success("Your form has been submitted successfully")
   }

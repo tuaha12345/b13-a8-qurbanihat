@@ -2,16 +2,14 @@ import React from 'react';
 import Navbar from '../component/shared/Navbar';
 import Footer from '../component/shared/Footer';
 
-
-
-const MainLayout = ({ children }) => {
+const layout = ({ children }) => {
     return (
         <>
-        <Navbar />
-        {children}
-        <Footer></Footer>
+            <Navbar></Navbar>
+            {children}
+            <Footer></Footer>
         </>
     );
 };
 
-export default MainLayout;
+export default layout;

@@ -1,9 +1,17 @@
 // "use client";
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { auth } from "@/lib/auth"
+import { headers } from "next/headers"
+import Logout from "./Logout";
 
 
-const Navbar = () => {
+const Navbar = async () => {
+      const session = await auth.api.getSession({
+        headers: await headers()
+    })
+    // console.log("session", session.user.name);
     return (
 
             <div className="max-lg:collapse bg-base-200  shadow-sm w-full rounded-md">
@@ -21,19 +29,26 @@ const Navbar = () => {
   height={40}
   className='rounded-full border border-green-500'
 />
-      <button className="btn btn-ghost text-xl text-green-500">QurbaniHat</button>
+      <Link href="/" className="btn btn-ghost text-xl text-green-500 font-bold">QurbaniHat</Link>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
-        <li><button>Home</button></li>
-        <li><button>All Animals</button></li>
+        <li><Link href="/" className='font-bold'>Home</Link></li>
+        <li><Link href="/all_animals" className='font-bold'>All Animals</Link></li>
+        <li><Link href="/profile" className='font-bold'>Profile</Link></li>
       </ul>
     </div>
     <div className="navbar-end">
-      <ul className="menu menu-horizontal px-1">
-        <li><button>Login</button></li>
-        <li><button>Register</button></li>
-      </ul>
+      {!session ?(      <ul className="menu menu-horizontal px-1">
+        <li><Link href="/login" className='font-bold'>Login</Link></li>
+        <li><Link href="/register" className='font-bold'>Register</Link></li>
+      </ul>):(      <ul className="flex gap-2 justify-center px-1">
+        <Image src={session.user.image} width={30} height={35} className='rounded-full' alt={session.user.name}></Image>
+        <li className='px-3 font-bold'>{session.user.name}</li>
+          <Logout></Logout>
+      </ul>)}
+
+
     </div>
   </div>
 
@@ -42,8 +57,10 @@ const Navbar = () => {
 
       <li>
         <ul>
-        <li><button>Home</button></li>
-        <li><button>All Animals</button></li>
+        <li><Link href="/" className='font-bold'>Home</Link></li>
+        <li><Link href="/all_animals" className='font-bold'>All Animals</Link></li>
+        <li><Link href="/profile" className='font-bold'>Profile</Link></li>
+
         </ul>
       </li>
 

@@ -30,7 +30,6 @@ const externalImage="https://media1.tenor.com/m/TUydBiUclmEAAAAd/cow-walk.gif"
             /> */}
           </div>
         ))}
-  I can be a React component, multiple React components, or just some text.
 </Marquee>
       
     </div>
