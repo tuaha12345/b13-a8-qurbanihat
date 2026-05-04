@@ -44,7 +44,7 @@ const ProfileCard = ({ user }) => {
 
     return (
         <>
-            <div className="card bg-base-100 shadow-md w-96 p-8 flex flex-col items-center gap-4">
+            <div className="card bg-base-100 shadow-md w-96 p-8 flex flex-col items-center gap-4 ">
                 <Image
                     src={imageUrl}
                     alt="Profile Picture"

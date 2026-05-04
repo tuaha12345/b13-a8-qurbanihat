@@ -53,7 +53,7 @@ if (error) {
 
   return (
     <div className="">
-      <div className="min-h-screen flex items-center justify-center bg-green-100 py-14 ">
+      <div className="min-h-screen flex items-center justify-center bg-green-100 py-14 px-6 md:px-1">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-center text-green-600 mb-6">
             Create Your Account

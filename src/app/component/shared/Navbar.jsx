@@ -40,14 +40,13 @@ const Navbar = async () => {
     </div>
     <div className="navbar-end">
       {!session ?(      <ul className="menu menu-horizontal px-1">
-        <li><Link href="/login" className='font-bold'>Login</Link></li>
-        <li><Link href="/register" className='font-bold'>Register</Link></li>
+        <li><Link href="/login" className='font-bold hidden md:block'>Login</Link></li>
+        <li><Link href="/register" className='font-bold hidden md:block'>Register</Link></li>
       </ul>):(      <ul className="flex gap-2 justify-center px-1">
         <Image src={session.user.image} width={30} height={35} className='rounded-full' alt={session.user.name}></Image>
-        <li className='px-3 font-bold'>{session.user.name}</li>
+        <li className='px-3 font-bold hidden md:block'>{session.user.name}</li>
           <Logout></Logout>
       </ul>)}
-
 
     </div>
   </div>
@@ -60,6 +59,8 @@ const Navbar = async () => {
         <li><Link href="/" className='font-bold'>Home</Link></li>
         <li><Link href="/animals" className='font-bold'>All Animals</Link></li>
         <li><Link href="/profile" className='font-bold'>Profile</Link></li>
+                <li><Link href="/login" className='font-bold'>Login</Link></li>
+        <li><Link href="/register" className='font-bold'>Register</Link></li>
 
         </ul>
       </li>

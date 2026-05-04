@@ -29,7 +29,7 @@ const UpdateProfileModal = ({ isOpen, currentName, currentImageUrl, onSave, onCl
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-6 md:px-1">
             <div className="bg-base-100 rounded-xl shadow-lg w-96 p-6 flex flex-col gap-4">
 
                 <h2 className="text-lg font-semibold">Update Profile</h2>
