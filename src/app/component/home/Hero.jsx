@@ -3,6 +3,8 @@ import Marquee from "react-fast-marquee";
 
 import { HiOutlineCheckCircle, HiOutlineTruck } from "react-icons/hi";
 import { BsShieldCheck, BsCurrencyDollar } from "react-icons/bs";
+import Link from "next/link";
+import 'animate.css'; 
 
 const Hero = () => {
   return (
@@ -17,7 +19,7 @@ const Hero = () => {
         <div className="">
           <div className="flex mb-7">
             <Marquee speed={50} pauseOnHover={true}>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 py-6 px-10 text-center rounded-xl shadow-lg mx-4">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 py-6 px-10 text-center rounded-xl shadow-lg mx-4 animate__animated animate__bounceIn">
                 <h1 className="text-3xl md:text-5xl font-extrabold text-white">
                   Welcome to <span className="text-green-500">QurbaniHat</span>
                 </h1>
@@ -47,17 +49,17 @@ const Hero = () => {
               </div>
             </Marquee>
           </div>
-          <h1 className="mb-5 text-6xl font-bold">
+          <h1 className="mb-5 text-6xl font-bold animate__animated animate__bounceIn">
             Find Your <span className="text-green-500">Perfect</span>
             <br></br> Qurbani Animal
           </h1>
-          <p className="mb-5">
+          <p className="mb-5 ">
             Browse certified, health-checked livestock from trusted farmers
             across Bangladesh. Authentic Qurbani animals at your fingertips.
           </p>
           <div className="flex gap-7 justify-center">
-            <button className="btn bg-green-500 text-white">Get Started</button>
-            <button className="btn btn-soft  text-green-500">Pricing</button>
+            <Link href="/animals" className="btn bg-green-500 text-white">Get Started</Link>
+            <Link href="/pricing" className="btn btn-soft  text-green-500">Pricing</Link>
           </div>
         </div>
       </div>

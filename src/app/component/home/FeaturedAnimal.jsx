@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const FeaturedAnimal = ({ animals }) => {
   const [featured, setFeatured] = useState(animals);
@@ -38,7 +39,7 @@ const FeaturedAnimal = ({ animals }) => {
               </div>
               <div className="card-actions justify-end">
                 <button className="btn bg-green-500 text-white">
-                  View Details
+                  <Link href={`/all_animals/${animal.id}`}>Details</Link>
                 </button>
               </div>
             </div>
