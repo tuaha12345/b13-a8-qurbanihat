@@ -4,7 +4,7 @@ import animals from '@/lib/data.json';
 import Image from "next/image";
 import Link from 'next/link';
 
-const page = () => {
+const Animalpage = () => {
     const [filteredAnimals, setFilteredAnimals] = useState(animals);
     const filterHander = (short) => {
         const selectedValue = short;
@@ -66,4 +66,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Animalpage;

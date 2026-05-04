@@ -1,13 +1,17 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { useForm } from "react-hook-form"
   import { ToastContainer, toast } from 'react-toastify';
+  import Link from "next/link";
+  import { FaGoogle } from "react-icons/fa6";
 
 
 const Page = () => {
+    const router = useRouter();
     const [isOpen, setOpen] = React.useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -18,21 +22,38 @@ const Page = () => {
     email: RegData.email, // required
     password: RegData.password,
     image: RegData.photoURL,
-    callbackURL: "/",
 });
 if (error) {
     console.error(error);
     toast.error(error.message)
 } else {
     console.log(data);
-    toast.success("Registration successful")
+    
+    // Logout after registration
+    await authClient.signOut();
+    
+    toast.success("Registration successful! Please login");
+     router.push("/login"); 
 }
     }
+            const LoginWithGoogle= async()=>{
 
+                const { data, error } = await authClient.signIn.social({
+                    provider: "google",
+                    callbackURL: "/",
+                });
+                if (error) {
+                    console.error(error);
+                    toast.error(error.message)
+                } else {
+                    console.log(data);
+                    toast.success("SignIn successful")
+                }
+            }
 
   return (
-    <div>
-      <div className="min-h-screen flex items-center justify-center bg-green-100">
+    <div className="">
+      <div className="min-h-screen flex items-center justify-center bg-green-100 py-14 ">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-center text-green-600 mb-6">
             Create Your Account
@@ -83,10 +104,16 @@ if (error) {
               /> */}
                         <input type={isOpen ?"text":"password" } className="input w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="Password" {...register("password",{required:"Password is required"})} />
            {errors.password && <span className="text-red-500">{errors.password.message}</span>}
-                     <span className="absolute bottom-17 right-8" onClick={()=>setOpen(!isOpen)}>
+                     <span className="absolute bottom-30.5 right-8" onClick={()=>setOpen(!isOpen)}>
                        {isOpen ?<FaRegEyeSlash /> : <FaRegEye />}
                      </span>
             </div>
+                        <div className="flex justify-center">
+                          <button type="button" className="btn border-green-500 text-green-500  bg-white" onClick={LoginWithGoogle}>
+                            <FaGoogle />
+                            Login With Google
+                          </button>
+                        </div>
             <button
               type="submit"
               className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg font-semibold transition duration-300"
@@ -98,7 +125,7 @@ if (error) {
           <p className="text-center text-sm text-gray-600 mt-6">
             Already have an account?
             <span className="text-green-500 font-semibold cursor-pointer ml-1">
-              Login
+              <Link href="/login">Login</Link>
             </span>
           </p>
         </div>

@@ -34,7 +34,7 @@ const Navbar = async () => {
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
         <li><Link href="/" className='font-bold'>Home</Link></li>
-        <li><Link href="/all_animals" className='font-bold'>All Animals</Link></li>
+        <li><Link href="/animals" className='font-bold'>All Animals</Link></li>
         <li><Link href="/profile" className='font-bold'>Profile</Link></li>
       </ul>
     </div>
@@ -58,7 +58,7 @@ const Navbar = async () => {
       <li>
         <ul>
         <li><Link href="/" className='font-bold'>Home</Link></li>
-        <li><Link href="/all_animals" className='font-bold'>All Animals</Link></li>
+        <li><Link href="/animals" className='font-bold'>All Animals</Link></li>
         <li><Link href="/profile" className='font-bold'>Profile</Link></li>
 
         </ul>

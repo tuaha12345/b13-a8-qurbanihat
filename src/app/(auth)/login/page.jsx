@@ -6,6 +6,7 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { useForm } from "react-hook-form"
 import { ToastContainer, toast } from 'react-toastify';
 import { FaGoogle } from "react-icons/fa6";
+import Link from "next/link";
 
 const Page = () => {
         const [isOpen, setOpen] = React.useState(false);
@@ -46,7 +47,7 @@ const Page = () => {
       <div className="min-h-screen flex items-center justify-center bg-green-100">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-center text-green-600 mb-6">
-            Welcome Back
+            Login
           </h2>
 
           <form className="space-y-4 relative" onSubmit={handleSubmit(onSubmit)}>
@@ -93,7 +94,7 @@ const Page = () => {
           <p className="text-center text-sm text-gray-600 mt-6">
             Don’t have an account?
             <span className="text-green-500 font-semibold cursor-pointer ml-1">
-              Register
+              <Link href="/register">Register</Link>
             </span>
           </p>
         </div>
